@@ -23,11 +23,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="oYO-Ys-cJv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HZt-Nn-KEp">
                                         <rect key="frame" x="0.0" y="45" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="XH6-AG-4v3"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="306-wa-83H">
                                         <rect key="frame" x="0.0" y="90" width="260" height="30"/>
@@ -74,7 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userNameTextField" destination="RYB-8c-biA" id="l9Y-bj-UUM"/>
+                        <outlet property="userNameTextField" destination="RYB-8c-biA" id="TPa-JN-bXv"/>
                         <outlet property="userPassTextField" destination="HZt-Nn-KEp" id="9Df-lT-TYi"/>
                     </connections>
                 </viewController>

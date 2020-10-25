@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userPassTextField.delegate = self
+
     }
     
     // Метод для скрытия клавиатуры тапом по экрану
@@ -58,13 +60,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case userNameTextField:
-            userNameTextField.becomeFirstResponder()
-        case userPassTextField:
             userPassTextField.becomeFirstResponder()
+        case userPassTextField:
+            loginButtonPressed()
+
         default:
-            textField.resignFirstResponder()
+            break
         }
-        return false
+        return true
 
     }
     
