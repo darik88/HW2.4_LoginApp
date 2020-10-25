@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E3988800254592F900DA2607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39887FF254592F900DA2607 /* User.swift */; };
+		E39888092545C08300DA2607 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39888082545C08300DA2607 /* UserInfoViewController.swift */; };
+		E398880C2545C5FC00DA2607 /* MoreAboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398880B2545C5FC00DA2607 /* MoreAboutUserViewController.swift */; };
 		E39D5F0725435F05007AFEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0625435F05007AFEAD /* AppDelegate.swift */; };
 		E39D5F0925435F05007AFEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0825435F05007AFEAD /* SceneDelegate.swift */; };
 		E39D5F0B25435F05007AFEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0A25435F05007AFEAD /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		E39887FF254592F900DA2607 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E39888082545C08300DA2607 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		E398880B2545C5FC00DA2607 /* MoreAboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserViewController.swift; sourceTree = "<group>"; };
 		E39D5F0325435F05007AFEAD /* HW2.4_LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.4_LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39D5F0625435F05007AFEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39D5F0825435F05007AFEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E398880F2545F9D900DA2607 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E39D5F0625435F05007AFEAD /* AppDelegate.swift */,
+				E39D5F0825435F05007AFEAD /* SceneDelegate.swift */,
+				E39D5F1425435F06007AFEAD /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E39888102545F9F900DA2607 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E39D5F0F25435F06007AFEAD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E39D5EFA25435F05007AFEAD = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +93,8 @@
 				E39887FE254592D500DA2607 /* Models */,
 				E39D5F1B25442EF9007AFEAD /* Storyboards */,
 				E39D5F1E25442F32007AFEAD /* Controllers */,
-				E39D5F0625435F05007AFEAD /* AppDelegate.swift */,
-				E39D5F0825435F05007AFEAD /* SceneDelegate.swift */,
-				E39D5F0F25435F06007AFEAD /* Assets.xcassets */,
-				E39D5F1425435F06007AFEAD /* Info.plist */,
+				E39888102545F9F900DA2607 /* Resources */,
+				E398880F2545F9D900DA2607 /* SupportingFiles */,
 			);
 			path = HW2.4_LoginApp;
 			sourceTree = "<group>";
@@ -93,6 +113,8 @@
 			children = (
 				E39D5F0A25435F05007AFEAD /* ViewController.swift */,
 				E39D5F1F25442FAB007AFEAD /* UserPageViewController.swift */,
+				E39888082545C08300DA2607 /* UserInfoViewController.swift */,
+				E398880B2545C5FC00DA2607 /* MoreAboutUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E39D5F0B25435F05007AFEAD /* ViewController.swift in Sources */,
+				E398880C2545C5FC00DA2607 /* MoreAboutUserViewController.swift in Sources */,
+				E39888092545C08300DA2607 /* UserInfoViewController.swift in Sources */,
 				E39D5F0725435F05007AFEAD /* AppDelegate.swift in Sources */,
 				E39D5F2025442FAB007AFEAD /* UserPageViewController.swift in Sources */,
 				E3988800254592F900DA2607 /* User.swift in Sources */,
@@ -319,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HW2.4_LoginApp/Info.plist;
+				INFOPLIST_FILE = HW2.4_LoginApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "homework.swiftbook.HW2-4-LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -337,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HW2.4_LoginApp/Info.plist;
+				INFOPLIST_FILE = HW2.4_LoginApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "homework.swiftbook.HW2-4-LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

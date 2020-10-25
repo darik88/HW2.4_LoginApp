@@ -9,17 +9,15 @@ struct User {
     let name: String
     let userName: String
     let password: String
-    let info: UserInfo
-}
-
-struct UserInfo {
-    let text: String
-    
-    
+    let info: String
 }
 
 extension User {
     static func getUser() -> User {
-        return User(name: "Айдар", userName: "user", password: "password", info: UserInfo(text: "dsdsds"))
+        return User(
+            name: "Айдар Рахматуллин",
+            userName: "user",
+            password: "pass",
+            info: "Привет! Меня зовут Айдар, мне 32 и живу в Мск. Работаю QA, изучаю Swift и разработку мобильный приложений под iOS")
     }
 }

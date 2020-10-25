@@ -17,17 +17,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case userNameTextField:
-            userNameTextField.becomeFirstResponder()
-        case userPassTextField:
-            userPassTextField.becomeFirstResponder()
-        default:
-            textField.resignFirstResponder()
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
+        userPage.userName = userNameTextField.text
+        
+        
+        if let controllers = tabBarController.viewControllers {
+            
+            for counter in 1..<controllers.count {
+                controllers[counter].tabBarItem.title = "Page \(counter)"
+            }
         }
-        return false
-
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        userNameTextField.text = nil
+        userPassTextField.text = nil
     }
     
     @IBAction func loginButtonPressed() {
@@ -42,23 +55,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         showAlert(with: "Password", and: "Your password is \(User.getUser().password)")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
-        guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
-        userPage.userName = userNameTextField.text
-        
-    }
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-        userNameTextField.text = nil
-        userPassTextField.text = nil
-    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTextField:
+            userNameTextField.becomeFirstResponder()
+        case userPassTextField:
+            userPassTextField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
 
-    // Метод для скрытия клавиатуры тапом по экрану
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-        
     }
     
     private func checkUserCridentials() {
