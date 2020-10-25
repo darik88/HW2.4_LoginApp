@@ -47,10 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
         userPage.userName = userNameTextField.text
         
-        guard let infoPage = tabBarController.viewControllers?[1] as? UserInfoViewController else { return }
-        infoPage.userInfo = "\(User.getUser().info)"
-        
-        
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {

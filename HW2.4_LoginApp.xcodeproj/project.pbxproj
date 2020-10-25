@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E3988800254592F900DA2607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39887FF254592F900DA2607 /* User.swift */; };
-		E39888052545A77400DA2607 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39888042545A77400DA2607 /* UserInfoViewController.swift */; };
 		E39D5F0725435F05007AFEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0625435F05007AFEAD /* AppDelegate.swift */; };
 		E39D5F0925435F05007AFEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0825435F05007AFEAD /* SceneDelegate.swift */; };
 		E39D5F0B25435F05007AFEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F0A25435F05007AFEAD /* ViewController.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		E39887FF254592F900DA2607 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E39888042545A77400DA2607 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		E39D5F0325435F05007AFEAD /* HW2.4_LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.4_LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39D5F0625435F05007AFEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39D5F0825435F05007AFEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			children = (
 				E39D5F0A25435F05007AFEAD /* ViewController.swift */,
 				E39D5F1F25442FAB007AFEAD /* UserPageViewController.swift */,
-				E39888042545A77400DA2607 /* UserInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E39D5F0B25435F05007AFEAD /* ViewController.swift in Sources */,
-				E39888052545A77400DA2607 /* UserInfoViewController.swift in Sources */,
 				E39D5F0725435F05007AFEAD /* AppDelegate.swift in Sources */,
 				E39D5F2025442FAB007AFEAD /* UserPageViewController.swift in Sources */,
 				E3988800254592F900DA2607 /* User.swift in Sources */,
