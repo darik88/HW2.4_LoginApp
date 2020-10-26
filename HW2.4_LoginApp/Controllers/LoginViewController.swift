@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let user = User.getUser()
 
@@ -96,7 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 
 // MARK: - Alert
-extension ViewController {
+extension LoginViewController {
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
