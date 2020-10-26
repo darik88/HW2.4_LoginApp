@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
     
-    let user = User.getUser()
+    private let user = User.getUser()
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var userPassTextField: UITextField!
@@ -17,21 +17,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPassTextField.delegate = self
-
-    }
-    
-    // Метод для скрытия клавиатуры тапом по экрану
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
-        userPage.userName = userNameTextField.text
+        userPage.user = user
         
         if let controllers = tabBarController.viewControllers {
             
@@ -58,20 +49,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         showAlert(with: "Password", and: "Your password is \(user.password)")
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case userNameTextField:
-            userPassTextField.becomeFirstResponder()
-        case userPassTextField:
-            loginButtonPressed()
-
-        default:
-            break
-        }
-        return true
-
-    }
-    
     private func checkUserCridentials() {
         guard let userNameInput = userNameTextField.text, !userNameInput.isEmpty else {
             showAlert(with: "User name is empty", and: "Please enter user name")
@@ -91,6 +68,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             userPassTextField.text = nil
             return
         }
+        
+        performSegue(withIdentifier: "logIn", sender: nil)
     }
 }
 
@@ -103,5 +82,29 @@ extension LoginViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+
+// MARK: - TextField Delegate
+extension LoginViewController: UITextFieldDelegate {
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    // Перевод курсора в следующее поле. Если поля для пароля - логин
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTextField:
+            userPassTextField.becomeFirstResponder()
+        case userPassTextField:
+            loginButtonPressed()
+        default:
+            break
+        }
+        return true
     }
 }

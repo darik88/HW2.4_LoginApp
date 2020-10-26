@@ -40,7 +40,7 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="edO-5I-Cph"/>
-                                            <segue destination="1BC-Cw-i8B" kind="show" id="QTU-70-AZX"/>
+                                            <segue destination="1BC-Cw-i8B" kind="show" identifier="logIn" id="QTU-70-AZX"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pia-3q-7Fe">
