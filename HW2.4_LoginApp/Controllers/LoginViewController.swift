@@ -42,19 +42,6 @@ class LoginViewController: UIViewController {
 //                }
             }
         }
-        
-        
-        
-        
-//        guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
-//        userPage.user = user
-//
-//        if let controllers = tabBarController.viewControllers {
-//
-//            for counter in 1..<controllers.count {
-//                controllers[counter].tabBarItem.title = "Page \(counter)"
-//            }
-//        }
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
