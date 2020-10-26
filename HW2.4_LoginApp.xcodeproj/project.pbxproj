@@ -17,6 +17,7 @@
 		E39D5F1025435F06007AFEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39D5F0F25435F06007AFEAD /* Assets.xcassets */; };
 		E39D5F1325435F06007AFEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39D5F1125435F06007AFEAD /* LaunchScreen.storyboard */; };
 		E39D5F2025442FAB007AFEAD /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D5F1F25442FAB007AFEAD /* UserPageViewController.swift */; };
+		E3E7CF2025478D3A00899E9B /* AnotherUserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E7CF1F25478D3A00899E9B /* AnotherUserPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E39D5F1225435F06007AFEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39D5F1425435F06007AFEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39D5F1F25442FAB007AFEAD /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
+		E3E7CF1F25478D3A00899E9B /* AnotherUserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherUserPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E39D5F1F25442FAB007AFEAD /* UserPageViewController.swift */,
 				E39888082545C08300DA2607 /* UserInfoViewController.swift */,
 				E398880B2545C5FC00DA2607 /* MoreAboutUserViewController.swift */,
+				E3E7CF1F25478D3A00899E9B /* AnotherUserPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				E39D5F0B25435F05007AFEAD /* LoginViewController.swift in Sources */,
 				E398880C2545C5FC00DA2607 /* MoreAboutUserViewController.swift in Sources */,
+				E3E7CF2025478D3A00899E9B /* AnotherUserPageViewController.swift in Sources */,
 				E39888092545C08300DA2607 /* UserInfoViewController.swift in Sources */,
 				E39D5F0725435F05007AFEAD /* AppDelegate.swift in Sources */,
 				E39D5F2025442FAB007AFEAD /* UserPageViewController.swift in Sources */,

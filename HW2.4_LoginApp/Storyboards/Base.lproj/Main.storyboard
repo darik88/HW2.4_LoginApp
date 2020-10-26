@@ -222,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="3697.5" y="-675"/>
         </scene>
-        <!--View Controller-->
+        <!--Another User Page View Controller-->
         <scene sceneID="vRo-be-nxy">
             <objects>
-                <viewController id="ahB-2W-HJJ" sceneMemberID="viewController">
+                <viewController id="ahB-2W-HJJ" customClass="AnotherUserPageViewController" customModule="HW2_4_LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjG-ZW-g5v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,6 +259,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vme-ad-Dq1"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="ZuV-tp-ZAJ" id="lWF-0F-Toc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="952-3M-kjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

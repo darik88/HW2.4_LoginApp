@@ -8,15 +8,14 @@
 import UIKit
 
 class MoreAboutUserViewController: UIViewController {
-
+    var user: User!
+    
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var userInfoTextLabel: UILabel!
-    
-    var info: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainLabel.text = "Обо мне"
-        userInfoTextLabel.text = info
+        userInfoTextLabel.text = user.info
     }
 }

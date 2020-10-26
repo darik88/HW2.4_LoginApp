@@ -9,18 +9,15 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
-    let user = User.getUser()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = user.name
+        title = user.name
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let moreAboutUserPage = segue.destination as? MoreAboutUserViewController else {
-            return
-        }
-        moreAboutUserPage.info = user.info
+        guard let moreAboutUserPage = segue.destination as? MoreAboutUserViewController else { return }
+        moreAboutUserPage.user = user
     }
-
 }
