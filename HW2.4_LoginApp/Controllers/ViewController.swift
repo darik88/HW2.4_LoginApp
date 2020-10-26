@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
+    let user = User.getUser()
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var userPassTextField: UITextField!
@@ -31,7 +33,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let userPage = tabBarController.viewControllers?.first as? UserPageViewController else { return }
         userPage.userName = userNameTextField.text
         
-        
         if let controllers = tabBarController.viewControllers {
             
             for counter in 1..<controllers.count {
@@ -50,11 +51,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Username", and: "Your user name is \(User.getUser().userName)")
+        showAlert(with: "Username", and: "Your user name is \(user.userName)")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Password", and: "Your password is \(User.getUser().password)")
+        showAlert(with: "Password", and: "Your password is \(user.password)")
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -82,8 +83,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let username = User.getUser().userName
-        let password = User.getUser().password
+        let username = user.userName
+        let password = user.password
         
         if userNameInput != username  || passwordInput != password {
             showAlert(with: "Wrong user name or password", and: "Please enter correct user name and password")
