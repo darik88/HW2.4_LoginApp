@@ -22,18 +22,24 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let arrayOfControllers = tabBarController.viewControllers else { return }
+        
         for controller in arrayOfControllers {
             if let controller = controller as? UserPageViewController {
                 controller.user = user
             } else if let controller = controller as? UINavigationController {
-                let navigationVC = controller.viewControllers
-                for controller in navigationVC {
-                    if let controller = controller as? UserInfoViewController {
-                        controller.user = user
-                    } else if let controller = controller as? AnotherUserPageViewController {
-                        controller.user = user
-                    }
+                if let userInfo = controller.topViewController as? UserInfoViewController {
+                    userInfo.user = user
+                } else if let anotherUser = controller.topViewController as? AnotherUserPageViewController {
+                    anotherUser.user = user
                 }
+//                let navigationVC = controller.viewControllers
+//                for controller in navigationVC {
+//                    if let controller = controller as? UserInfoViewController {
+//                        controller.user = user
+//                    } else if let controller = controller as? AnotherUserPageViewController {
+//                        controller.user = user
+//                    }
+//                }
             }
         }
         
