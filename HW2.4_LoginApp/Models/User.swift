@@ -13,6 +13,7 @@ struct User {
 }
 
 extension User {
+
     static func getUser() -> User {
         return User(
             name: "Айдар Рахматуллин",

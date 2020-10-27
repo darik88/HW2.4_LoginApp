@@ -24,22 +24,26 @@ class LoginViewController: UIViewController {
         guard let arrayOfControllers = tabBarController.viewControllers else { return }
         
         for controller in arrayOfControllers {
-            if let controller = controller as? UserPageViewController {
-                controller.user = user
-            } else if let controller = controller as? UINavigationController {
-                if let userInfo = controller.topViewController as? UserInfoViewController {
-                    userInfo.user = user
-                } else if let anotherUser = controller.topViewController as? AnotherUserPageViewController {
-                    anotherUser.user = user
-                }
-//                let navigationVC = controller.viewControllers
-//                for controller in navigationVC {
-//                    if let controller = controller as? UserInfoViewController {
-//                        controller.user = user
-//                    } else if let controller = controller as? AnotherUserPageViewController {
-//                        controller.user = user
-//                    }
+//            if let controller = controller as? WelcomeViewController {
+//                controller.user = user
+//            } else if let controller = controller as? UINavigationController {
+//                if let controller = controller.topViewController as? UserInfoViewController {
+//                    controller.user = user
+//                } else if let controller = controller.topViewController as? AnotherUserPageViewController {
+//                    controller.user = user
 //                }
+//            }
+            switch controller {
+            case let controller as WelcomeViewController:
+                controller.user = user
+            case let controller as UINavigationController:
+                if let controller = controller.topViewController as? UserInfoViewController {
+                    controller.user = user
+                } else if let controller = controller.topViewController as? AnotherUserPageViewController {
+                    controller.user = user
+                }
+            default:
+                break
             }
         }
     }

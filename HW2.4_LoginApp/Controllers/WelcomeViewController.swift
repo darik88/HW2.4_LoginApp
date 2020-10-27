@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserPageViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     @IBOutlet var userNameLabel: UILabel!
     var user: User!
